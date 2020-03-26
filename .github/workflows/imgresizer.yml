@@ -27,3 +27,7 @@ jobs:
         image-folder: 'images' # This is a Required field & this folder has original images
         new-resolution: '720x480' # This is Required field
         output-folder: "resized_images" # This is Required field & this folder will be used to store resized images
+    - uses: actions/upload-artifact@v1
+      with:
+        name: my-artifact
+        path: ./resized_images
